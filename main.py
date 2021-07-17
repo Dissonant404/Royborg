@@ -1,5 +1,4 @@
 import discord
-from discord.ext.commands import has_permissions, MissingPermissions
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='#',help_command=None)  
