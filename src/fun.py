@@ -145,4 +145,4 @@ async def guessword(ctx):
                     await ctx.send(f"That was the last hint. You lost {player}. The correct word was **{word}**. Better luck next time!")
                     
 
-
+bot.run('TOKEN')
