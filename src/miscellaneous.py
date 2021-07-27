@@ -34,22 +34,6 @@ async def google(ctx,*,gsearch):
     search_embed = discord.Embed(title=f"Search results for {search_keyword}",description=links)
     await ctx.send(embed=search_embed)
     
-# Sends a video from youtube according to search
-
-@bot.command()
-async def ytsearch(ctx,*,search):
-
-
-    search_keyword=search
-    search_keyword=list(search_keyword)
-    for n,i in enumerate(search_keyword):
-        if i==' ':
-            search_keyword[n]='+'
-
-    search_keyword = ''.join(map(str, search_keyword))
-    html = urllib.request.urlopen("https://www.youtube.com/results?search_query=" + search_keyword)
-    video_ids = re.findall(r"watch\?v=(\S{11})", html.read().decode())
-    await ctx.send("https://www.youtube.com/watch?v=" + video_ids[0])
     
 # Makes a poll (max 6 choices)
 
