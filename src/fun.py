@@ -38,37 +38,9 @@ async def meme(ctx):
     meme_embed.set_image(url = url)
     await ctx.send(embed=meme_embed)
     
-# Sends a meme from r/shitposting
 
-@bot.command()
-async def edgy(ctx):
-    subreddit = reddit.subreddit("Shitposting")
-    all_subs = []
-    top = subreddit.top(limit=50,time_filter="day")
-    for submission in top:
-        all_subs.append(submission)
-    random_sub = random.choice(all_subs)
-    name = random_sub.title
-    url = random_sub.url
-    meme_embed = discord.Embed(title=name,color=discord.Color.red())
-    meme_embed.set_image(url = url)
-    await ctx.send(embed=meme_embed)
     
-# Sends a meme/post from a chosen subreddit   
- 
-@bot.command()
-async def subreddit(ctx,subreddit_choice):
-    subreddit = reddit.subreddit(subreddit_choice)
-    all_subs = []
-    top = subreddit.top(limit=50,time_filter="day")
-    for submission in top:
-        all_subs.append(submission)
-    random_sub = random.choice(all_subs)
-    name = random_sub.title
-    url = random_sub.url
-    meme_embed = discord.Embed(title=name,color=discord.Color.red())
-    meme_embed.set_image(url = url)
-    await ctx.send(embed=meme_embed)
+
     
 # Minigames | Rock paper scissors
 
